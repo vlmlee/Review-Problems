@@ -8,6 +8,7 @@ A string is a palindrome if it is the same reversed. So, what we
 need to do is reverse the string and see if it's equal to itself. 
 
 Time complexity: O(n)
+
 */
 
 const assert = require('assert');
