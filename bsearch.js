@@ -13,9 +13,9 @@ midpoint value of the array where the reference points are at
 the beginning and end of the array. If the key is greater than 
 that value, we set the lower reference point to one element ahead 
 of the midpoint and we recalculate the next midpoint. If the key 
-is less than that value, we set the reference point to one before
-the midpoint. We repeat this until we either find the key or when 
-the reference points cross.
+is less than that value, we set the upper reference point to one 
+element before the midpoint. We repeat this until we either find 
+the key or when the reference points cross.
 
 Time complexity: O(nlogn) with sort(), O(logn) for sorted input
 
