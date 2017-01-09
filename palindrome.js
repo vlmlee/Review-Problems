@@ -14,7 +14,7 @@ const assert = require('assert');
 // Using built-in methods 'split', 'reverse', and 'join'
 // a.k.a. the *best* way
 function palindrome(str) {
-	return (str.split('').reverse().join('') === str) ? true : false;
+	return (str.split('').reverse().join('') === str);
 }
 
 // 'In-place'-like (since strings are immutable) iterative solution
