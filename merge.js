@@ -17,8 +17,8 @@ const assert = require('assert');
 
 function merge(left, right) {
 	let merged = [],
-		which = left.length > right.length ? left : right,
-		order = (function() {
+	    which = left.length > right.length ? left : right,
+	    order = (function() {
 			for (let i = 0; i < which.length - 1; i++) {
 				if (which[i] > which[i + 1]) {
 					return false;
