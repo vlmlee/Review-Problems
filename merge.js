@@ -11,6 +11,8 @@ the remaining elements to the now merged array. If the array are sorted in
 ascending order, our comparison pushes the lower number into the new array. 
 If it is sorted descending, we push the higher number.
 
+Time complexity: O(l+r), i.e. length of the arrays
+
 */
 
 const assert = require('assert');
