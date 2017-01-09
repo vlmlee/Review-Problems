@@ -28,6 +28,8 @@ each element in matrix x and multiply it with the jth element of
 each *array* in matrix y, which are the columns. Then we take the sum of 
 those multiplications and set it to the z[i][j] position.
 
+Time complexity: O(n^2)
+
 */
 
 const assert = require('assert');
