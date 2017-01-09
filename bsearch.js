@@ -17,6 +17,8 @@ is less than that value, we set the reference point to one before
 the midpoint. We repeat this until we either find the key or when 
 the reference points cross.
 
+Time complexity: O(nlogn) with sort(), O(logn) for sorted input
+
 */
 
 
