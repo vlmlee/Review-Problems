@@ -8,6 +8,8 @@ Solution:
 We can use es7's 'includes' method to quickly determine if a substring exist and then
 do a linear search of each substring of the same length.
 
+Time complexity: O(n)
+
 */
 
 const assert = require('assert');
