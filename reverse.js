@@ -7,6 +7,8 @@ Solution:
 We use es6 destructuring in order to switch corresponding elements
 (mirrored elements) without using a temporary variable. 
 
+Time complexity: O(n)
+
 */
 
 const assert = require('assert');
