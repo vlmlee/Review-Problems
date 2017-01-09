@@ -1,7 +1,8 @@
 /*
 
 Problem:
-Determine if a string is a substring and if it is, print out the index.
+Determine if a string is a substring and if it is, print out the index of its 
+first occurence.
 
 Solution:
 We can use es7's include to quickly determine if a substring exist and then
