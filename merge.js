@@ -5,8 +5,8 @@ Merge two sorted arrays.
 
 Solution:
 The solution takes in two arrays as parameters and compares the elements 
-at the beginning of the arrays. We shift the result from its array into another 
-array and repeat this process until one array empties, which then we concatenate 
+at the beginning of the arrays. We shift the result into another array and 
+repeat this process until one array empties, which then we concatenate 
 the remaining elements to the now merged array. If the array are sorted in 
 ascending order, our comparison pushes the lower number into the new array. 
 If it is sorted descending, we push the higher number.
