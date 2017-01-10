@@ -47,6 +47,6 @@ function telephone(input) {
 }
 
 assert.equal(telephone('1 2 3 4'), 'adgj');
-assert.equal(telephone('1 2 3 4'), 'adgj');
+assert.equal(dictionary, { '1 2 3 4': 'adgj' });
 assert.equal(telephone('33 22 444 444 555') 
 	+ ' ' + telephone('88 555 666 444 2'), 'hello world');
