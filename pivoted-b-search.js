@@ -16,7 +16,7 @@ function findMin(arr) {
 
 function pivotBsearch(arr, key) {
 	let pivot = findMin(arr);
-	if (arr[pivot] === key) return pivot;
+	if (arr[pivot] === key) return true;
 	if (arr[0] <= key) return bsearch(arr, 0, pivot, key);
 	return bsearch(arr, pivot + 1, arr.length - 1, key);
 }
