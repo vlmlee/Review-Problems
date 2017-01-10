@@ -17,36 +17,12 @@ function mergeLinkedList(la, lb) {
     }
     
     while (left) {
-        let pos = merged.find(node => {
-            if (node.data > left.data) {
-                return node;
-            } else {
-                return false;
-            }
-        });
-        
-        if (pos) {
-            merged.addBefore(pos, left.data);
-        } else {
-            merged.add(left.data);
-        }
+        merged.add(left.data);
         left = left.next;
     }
     
     while (right) {
-        let pos = merged.find(node => {
-            if (node.data > right.data) {
-                return node;
-            } else {
-                return false;
-            }
-        });
-        
-        if (pos) {
-            merged.addBefore(pos, right.data);
-        } else {
-            merged.add(right.data);
-        }
+        merged.add(right.data);
         right = right.next;
     }
     
