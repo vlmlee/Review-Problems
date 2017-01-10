@@ -23,7 +23,7 @@ _preOrder(node, callback) {
 
 In-order traversal
 	1. Check if the current node is empty/null
-	2. Traverse the left subtree by recursively calling the in-rder function
+	2. Traverse the left subtree by recursively calling the in-order function
 	3. Display the data part of the root (or current node)
 	4. Traverse the right subtree by recursively calling the in-order function
   
