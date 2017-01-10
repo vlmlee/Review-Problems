@@ -24,14 +24,12 @@ function findDuplicates(arr) {
 	for (let i = arr.length - 1; i >= 0; i--) {
 		let key = arr.pop(),
 			found = bsearch(key, sortedArr);
-
 		if (found) {
 			if (dups.indexOf(key) === -1) {
 				dups.push(key);
 			}
 		}
 	}
-
 	return dups;
 }
 
@@ -46,7 +44,6 @@ function bsearch(key, arr) {
 	while (low <= high) {
 		let mid = Math.floor((low + high) / 2),
 			value = arr[mid];
-
 		if (value > key) {
 			high = mid - 1;
 		} else if (value < key) {
@@ -55,7 +52,6 @@ function bsearch(key, arr) {
 			return true;
 		}
 	}
-
 	return false;
 }
 
