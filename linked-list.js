@@ -8,6 +8,8 @@ A class-based implementation of a linked list.
 
 */
 
+const assert = require('assert');
+
 class LinkedList {
 	constructor() {
 		this._length = 0;
@@ -31,7 +33,7 @@ class LinkedList {
 		let currentNode = this.root,
 			count = 1;
 
-		if (this._length === 0 || position < 1 || position > length) {
+		if (this._length === 0 || position < 1 || position > this._length) {
 			throw new Error('Cannot find node');
 		}
 
@@ -45,9 +47,11 @@ class LinkedList {
 
 	remove(position) {
 		let currentNode = this.root,
-			count = 1;
+			count = 1,
+			nodeToDelete,
+			deletedNode;
 
-		if (this._length === 0 || position < 1 || position > length) {
+		if (this._length === 0 || position < 1 || position > this._length) {
 			throw new Error('Could not delete node');
 		}
 
@@ -68,21 +72,6 @@ class LinkedList {
 		this._length--;
 		return deletedNode;
 	}
-
-	reverse() {
-		let currentNode = this.root,
-			previousNode = null,
-			count = 1;
-
-		while (count < this._length) {
-			let temp = currentNode.next;
-			currentNode.next = previousNode;
-			previousNode = currentNode;
-			currentNode = temp;
-		}
-        
-		return previousNode;
-	}
 }
 
 class Node {
@@ -96,6 +85,4 @@ let list = new LinkedList();
 list.add(1);
 assert.equal(list.search(1).data, 1);
 list.add(2);
-list.reverse();
-assert.equal(list.search(1).data, 2);
 assert(list.remove(2));
