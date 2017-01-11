@@ -22,7 +22,7 @@ Just solving a list of interview questions for algorithms and data structures re
 ## Trees:
 * ~~Construct a BST from a sorted array~~
 * ~~All traversals~~
-* BFS/DFS
+* ~~BFS/DFS~~
 * Check if a tree is balanced
 * Check if two trees are mirror image of each other
 * Find max path sum in the tree where negative nodes are possible
