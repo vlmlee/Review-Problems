@@ -200,22 +200,6 @@ class BST {
 			return this.isBalanced(node.left) && this.isBalanced(node.right);
 		}
 	}
-
-	maxToRoot(node, max) {
-		if (!node) {
-			return 0;
-		}
-
-		let left = Math.max(this.maxToRoot(node.left), 0),
-			right = Math.max(this.maxToRoot(node.right), 0);
-
-		let ps1 = node.data + Math.max(left, right),
-			ps2 = node.data + left + right;
-
-		max = Math.max(max, ps1, ps2);
-
-		return ps1;
-	}
 }
 
 function arrayToBST(arr, tree) {
