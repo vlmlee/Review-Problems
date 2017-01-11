@@ -20,7 +20,7 @@ Just solving a list of interview questions for algorithms and data structures re
 * ~~Split a list into two lists where one has the even indices while other has the odd indices~~
 
 ## Trees:
-* Construct a BST from a sorted array
+* ~~Construct a BST from a sorted array~~
 * ~~All traversals~~
 * BFS/DFS
 * Check if a tree is balanced
