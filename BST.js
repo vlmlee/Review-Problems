@@ -160,10 +160,6 @@ tree.add(3);
 tree.add(4);
 tree.add(5);
 
-let preorder = [],
-	inorder = [],
-	postorder = [];
-
 assert.deepEqual(tree.preOrder(tree.root), [2, 1, 3, 4, 5]);
 assert.deepEqual(tree.inOrder(tree.root), [1, 2, 3, 4, 5]);
 assert.deepEqual(tree.postOrder(tree.root), [1, 5, 4, 3, 2]);
