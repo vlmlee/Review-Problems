@@ -26,7 +26,7 @@ Just solving a list of interview questions for algorithms and data structures re
 * ~~Check if a tree is balanced~~
 * ~~Check if two trees are mirror image of each other~~
 * ~~Find max path sum in the tree where negative nodes are possible~~
-* Find the lowest common ancestor of 2 nodes in a tree
+* ~~Find the lowest common ancestor of 2 nodes in a tree~~
 
 ## Backtracking:
 * ~~Find all permutations of an array~~
