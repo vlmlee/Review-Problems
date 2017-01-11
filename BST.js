@@ -212,6 +212,18 @@ function arrayToBST(arr, tree) {
 	arrayToBST(arr.slice(mid+1), tree);
 }
 
+function mirrorBST(t1, t2) {
+	t1.invert(t1.root);
+	let a = t1.inOrder(t1.root),
+		b = t2.inOrder(t2.root);
+	for (let i = 0; i < a.length; i++) {
+		if (a[i] !== b[i]) {
+			return false;
+		}
+	}
+	return true;
+}
+
 let tree = Object.create(BST.prototype);
 arrayToBST([1, 2, 3, 4, 5, 6, 7], tree);
 assert.deepEqual(tree.preOrder(tree.root), [4, 2, 1, 3, 6, 5, 7]);
@@ -229,3 +241,16 @@ unbalancedTree.add(4);
 unbalancedTree.add(5);
 unbalancedTree.add(6);
 assert.equal(unbalancedTree.isBalanced(unbalancedTree.root), false);
+
+let t1 = Object.create(BST.prototype),
+	t2 = Object.create(BST.prototype);
+
+t1.add(2);
+t1.add(1);
+t1.add(3);
+t2.add(2);
+t2.add(1);
+t2.add(3);
+t1.invert(t1.root);
+
+assert(mirrorBST(t2, t1));
