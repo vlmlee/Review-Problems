@@ -177,6 +177,29 @@ class BST {
 		}
 		return order;
 	}
+
+	getHeight(node) {
+		if (!node) {
+			return -1;
+		}
+		let left = this.getHeight(node.left),
+			right = this.getHeight(node.right);
+		return Math.max(left, right) + 1;
+	}
+
+	isBalanced(node) {
+		if (!node) {
+			return true;
+		}
+		let heightLeft = this.getHeight(node.left),
+			heightRight = this.getHeight(node.right),
+			diff = Math.abs(heightLeft - heightRight);
+		if (diff > 1) {
+			return false;
+		} else {
+			return this.isBalanced(node.left) && this.isBalanced(node.right);
+		}
+	}
 }
 
 function arrayToBST(arr, tree) {
@@ -197,3 +220,12 @@ assert.deepEqual(tree.postOrder(tree.root), [1, 3, 2, 5, 7, 6, 4]);
 assert.deepEqual(tree.bfs(tree.root), [4, 2, 6, 1, 3, 5, 7]);
 tree.invert(tree.root);
 assert.deepEqual(tree.inOrder(tree.root), [7, 6, 5, 4, 3, 2, 1]);
+assert(tree.isBalanced(tree.root));
+
+let unbalancedTree = Object.create(BST.prototype);
+unbalancedTree.add(3);
+unbalancedTree.add(2);
+unbalancedTree.add(4);
+unbalancedTree.add(5);
+unbalancedTree.add(6);
+assert.equal(unbalancedTree.isBalanced(unbalancedTree.root), false);
