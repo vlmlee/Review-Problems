@@ -277,6 +277,7 @@ assert.equal(unbalancedTree.isBalanced(unbalancedTree.root), false);
 
 let t1 = Object.create(BST.prototype),
 	t2 = Object.create(BST.prototype);
+
 t1.add(2);
 t1.add(1);
 t1.add(3);
