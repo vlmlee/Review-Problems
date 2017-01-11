@@ -195,3 +195,5 @@ assert.deepEqual(tree.preOrder(tree.root), [4, 2, 1, 3, 6, 5, 7]);
 assert.deepEqual(tree.inOrder(tree.root), [1, 2, 3, 4, 5, 6, 7]);
 assert.deepEqual(tree.postOrder(tree.root), [1, 3, 2, 5, 7, 6, 4]);
 assert.deepEqual(tree.bfs(tree.root), [4, 2, 6, 1, 3, 5, 7]);
+tree.invert(tree.root);
+assert.deepEqual(tree.inOrder(tree.root), [7, 6, 5, 4, 3, 2, 1]);
