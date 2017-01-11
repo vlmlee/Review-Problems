@@ -200,6 +200,22 @@ class BST {
 			return this.isBalanced(node.left) && this.isBalanced(node.right);
 		}
 	}
+
+	maxToRoot(node, max) {
+		if (!node) {
+			return 0;
+		}
+
+		let left = Math.max(this.maxToRoot(node.left), 0),
+			right = Math.max(this.maxToRoot(node.right), 0);
+
+		let ps1 = node.data + Math.max(left, right),
+			ps2 = node.data + left + right;
+
+		max = Math.max(max, ps1, ps2);
+
+		return ps1;
+	}
 }
 
 function arrayToBST(arr, tree) {
@@ -224,8 +240,17 @@ function mirrorBST(t1, t2) {
 	return true;
 }
 
+function maxPathSum(node) {
+	if (!node) return 0;
+	let left = Math.max(maxPathSum(node.left)),
+		right = Math.max(maxPathSum(node.right)),
+		sum = node.data + Math.max(left, right);
+	return sum;
+}
+
 let tree = Object.create(BST.prototype);
 arrayToBST([1, 2, 3, 4, 5, 6, 7], tree);
+
 assert.deepEqual(tree.preOrder(tree.root), [4, 2, 1, 3, 6, 5, 7]);
 assert.deepEqual(tree.inOrder(tree.root), [1, 2, 3, 4, 5, 6, 7]);
 assert.deepEqual(tree.postOrder(tree.root), [1, 3, 2, 5, 7, 6, 4]);
@@ -240,11 +265,11 @@ unbalancedTree.add(2);
 unbalancedTree.add(4);
 unbalancedTree.add(5);
 unbalancedTree.add(6);
+
 assert.equal(unbalancedTree.isBalanced(unbalancedTree.root), false);
 
 let t1 = Object.create(BST.prototype),
 	t2 = Object.create(BST.prototype);
-
 t1.add(2);
 t1.add(1);
 t1.add(3);
@@ -254,3 +279,10 @@ t2.add(3);
 t1.invert(t1.root);
 
 assert(mirrorBST(t2, t1));
+assert.equal(maxPathSum(t1.root), 5);
+assert.equal(maxPathSum(tree.root), 17);
+
+let t3 = Object.create(BST.prototype);
+arrayToBST([2, 7, 8, 9, 10, 11, 13, 15, 16], t3);
+
+assert.equal(maxPathSum(t3.root), 49);
