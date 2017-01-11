@@ -8,15 +8,17 @@ Pre-order traversal
   
 */
 
-_preOrder(node, callback) {
-	if (node) {
-		if (callback) {
-			callback(node);
-		}
-	}
+preOrder(node, preorder) {
+    if (!preorder) {
+        preorder = [];
+    }
 
-	this._preOrder(node.left, callback);
-	this._preOrder(node.right, callback);
+    if (node) {
+        preorder.push(node.data);
+        this.preOrder(node.left, preorder);
+        this.preOrder(node.right, preorder);
+    }
+    return preorder;
 }
 
 /*
@@ -29,15 +31,16 @@ In-order traversal
   
 */
 
-_inOrder(node, callback) {
-	if (node) {
-		this._inOrder(node.left, callback);
-		if (callback) {
-			callback(node);
-		}
-	}
-
-	this._inOrder(node.right, callback);
+inOrder(node, inorder) {
+    if (!inorder) {
+        inorder = [];
+    }
+    if (node) {
+        this.inOrder(node.left, inorder);
+        inorder.push(node.data);
+        this.inOrder(node.right, inorder);
+    }
+    return inorder;
 }
 
 /*
@@ -50,12 +53,14 @@ Post-order traversal
   
 */
 
-_postOrder(node, callback) {
-	if (node) {
-		this._postOrder(node.left, callback);
-		this._postOrder(node.right, callback);
-		if (callback) {
-			callback(node);
-		}
-	}
+postOrder(node, postorder) {
+    if (!postorder) {
+        postorder = [];
+    }
+    if (node) {
+        this.postOrder(node.left, postorder);
+        this.postOrder(node.right, postorder);
+        postorder.push(node.data);
+    }
+    return postorder;
 }
