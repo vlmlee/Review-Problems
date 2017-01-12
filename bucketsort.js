@@ -1,3 +1,20 @@
+/*
+
+Problem:
+Implement bucketsort.
+
+Solution:
+Bucketsort separates a list of items into two or more 
+buckets meeting certain conditions. The contents of each
+bucket is then separated again until they all have their own
+buckets. The items are then collected in order or in which ever 
+order you set from each level until all the items are sorted. 
+This sorting algorithm is stable.
+
+Time complexity: O(n)
+
+*/
+
 const assert = require('assert');
 
 function bucketsort(arr) {
