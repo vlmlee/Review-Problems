@@ -8,6 +8,8 @@ We split the array in two by its minimum value which
 we get by finding the peak of the array. We then perform
 a binary search on the array where the key is in range.
 
+Time complexity: O(logn)
+
 */
 
 const assert = require('assert');
