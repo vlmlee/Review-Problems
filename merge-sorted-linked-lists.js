@@ -12,6 +12,8 @@ moving onto the next node of that linked list. We do this comparison
 until we reach the end of a linked list and then add the rest of the other 
 linked list to the new linked list. 
 
+Time complexity: O(n)
+
 */
 
 const LinkedList = require('./LinkedList.js'),
