@@ -24,6 +24,12 @@ Time complexity: O(nlogn) with sort(), O(logn) for sorted input
 
 const assert = require('assert');
 
+/**
+* Binary search
+* @param {*} key - The value to search for.
+* @param {Array} a - An input array that may or may not be sorted.
+* @returns {Boolean}
+*/
 function bsearch(key, a) {
 	if (!a) {
 		return false;
