@@ -10,12 +10,24 @@ A class-based implementation of a linked list.
 
 const assert = require('assert');
 
+/**
+* Class representing a linked list.
+*/
 class LinkedList {
+    
+    /**
+    * @constructor - creates empty list with length 0 and null root
+    */
 	constructor() {
 		this._length = 0;
 		this.root = null;
 	}
 
+    /**
+    * Adds a node to the linked list. If no nodes exist, sets the node to root.
+    * @param {*} value - A value held by the node.
+    * @returns {Node}
+    */
 	add(value) {
 		let node = new Node(value);
         
@@ -29,6 +41,11 @@ class LinkedList {
 		return node;
 	}
 
+    /**
+    * Searches the list for a node at a particular position
+    * @param {Number} position - The position to return a node.
+    * @returns {Node}
+    */
 	search(position) {
 		let currentNode = this.root,
 			count = 1;
@@ -45,6 +62,11 @@ class LinkedList {
 		return currentNode;
 	}
 
+    /**
+    * Removes a node at a particular position.
+    * @param {Number} position - The position to remove a node.
+    * @returns {Node} deletedNode - Info on the deleted node.
+    */
 	remove(position) {
 		let currentNode = this.root,
 			count = 1,
@@ -74,7 +96,15 @@ class LinkedList {
 	}
 }
 
+/**
+* Class representing a Node.
+*/
 class Node {
+    
+    /*
+    * Creates a node.
+    * @params {*} data - A value held by the node.
+    */
 	constructor(data) {
 		this.data = data;
 		this.next = null;
