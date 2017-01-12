@@ -1,7 +1,24 @@
+/*
+
+Problem:
+Convert numbers into words according to letters on an old phone keypad.
+
+Solution:
+Split the incoming numbers into an array and handle each number with
+switch/case. Then store the input string of numbers in a dictionary 
+with the resulting word for fast lookup.
+
+*/
+
 const assert = require('assert');
 
 let dictionary = {};
 
+/**
+* Converts a string of numbers into a word.
+* @param {string} input - An input string of numbers.
+* @returns {string}
+*/
 function telephone(input) {
 	if (dictionary[input]) {
 		console.log('foo');
