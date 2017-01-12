@@ -1,6 +1,28 @@
+/*
+
+Problem:
+Merge two sorted lists.
+
+Solution:
+The solution is almost identical to merging two arrays except we 
+are using linked lists operations to add values into a new linked list. 
+We start at the heads of the two linked list, compare the two, and 
+insert the lesser node or value into the new linked list while also 
+moving onto the next node of that linked list. We do this comparison 
+until we reach the end of a linked list and then add the rest of the other 
+linked list to the new linked list. 
+
+*/
+
 const LinkedList = require('./LinkedList.js'),
       assert = require('assert');
 
+/**
+* Merges two sorted linked lists.
+* @param {LinkedList} la - First linked list.
+* @param {LinkedList} lb - Second linked list.
+* @returns {LinkedList}
+*/
 function mergeLinkedList(la, lb) {
     let merged = new LinkedList(),
         left = la.head,
