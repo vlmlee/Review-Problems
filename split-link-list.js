@@ -4,7 +4,7 @@ Problem:
 Split a list into two lists where one has the even indices while the other has odd indices.
 
 Solution:
-We use a flag to switch between adding to one list to adding 
+We use a flag to switch between adding to one list and adding 
 to the other until the end of the linked list.
 
 */
