@@ -14,10 +14,16 @@ Time complexity: O(n)
 
 const assert = require('assert');
 
-function isSubstring(str, sub) {
-	if (str.includes(sub)) {
-		for (let i = 0, len = sub.length; i < str.length; i++) {
-			if (str.slice(i, len + i) === sub) {
+/**
+* Check if a string is a substring of another.
+* @param {string} str - String to search in.
+* @param {string} key - The substring to search for.
+* @returns {Boolean}
+*/
+function isSubstring(str, key) {
+	if (str.includes(key)) {
+		for (let i = 0, len = key.length; i < str.length; i++) {
+			if (str.slice(i, len + i) === key) {
 				return `Index found: ${i}`;
 			}
 		}
