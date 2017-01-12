@@ -1,6 +1,22 @@
+/*
+
+Problem:
+Split a list into two lists where one has the even indices while the other has odd indices.
+
+Solution:
+We use a flag to switch between adding to one list to adding 
+to the other until the end of the linked list.
+
+*/
+
 const LinkedList = require('./LinkedList.js'),
       assert = require('assert');
 
+/**
+* Splits a linked list into two lists.
+* @param {LinkedList} list - An input linked list.
+* @returns {Object} la, lb
+*/
 function splitLinkedList(list) {
 	let la = new LinkedList(),
 		lb = new LinkedList(),
