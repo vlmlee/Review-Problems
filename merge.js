@@ -17,6 +17,12 @@ Time complexity: O(l+r), i.e. length of the arrays
 
 const assert = require('assert');
 
+/**
+* Merges two arrays.
+* @param {Array} left - First sorted input array to merge.
+* @param {Array} right - Second sorted input array to merge.
+* @returns {Array} merged - Merged sorted array.
+*/
 function merge(left, right) {
 	let merged = [],
 	    which = left.length > right.length ? left : right,
