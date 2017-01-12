@@ -15,6 +15,8 @@ f(n) = f(n-1) + f(n-2) + f(n-3)
 which is similiar to the fibonacci sequence. So, we can solve this problem
 by applying the algorithm for a fibonacci sequence.
 
+Time complexity: O(n)
+
 */
 
 
