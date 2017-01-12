@@ -262,7 +262,7 @@ class BST {
 	}
 
     /**
-    * Returns the high of a subtree.
+    * Returns the height of a subtree.
     * @param {Node} node - The root node of the subtree.
     * @returns {Number} - The height of the subtree.
     */
