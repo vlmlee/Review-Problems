@@ -1,5 +1,24 @@
+/*
+
+Problem:
+Implement mergesort.
+
+Solution:
+Mergesort works by recursively splitting an array by
+its middle until it becomes an array of a single element 
+and then merges each array. We merge it by comparing and 
+then pushing the single elements into an another array 
+from the bottom up.
+
+*/
+
 const assert = require('assert');
 
+/**
+* Mergesort
+* @param arr - An input array that may or may not be sorted.
+* @returns sorted - A sorted array.
+*/
 function mergesort(arr) {
 	if (arr.length < 2) {
 		return arr;
