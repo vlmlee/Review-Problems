@@ -14,6 +14,11 @@ Time complexity: O(n)
 
 const assert = require('assert');
 
+/**
+* Counting sort
+* @param {Array} arr - An input array that may or may not be sorted.
+* @returns {Array} result - A sorted array.
+*/
 function countingsort(arr) {
 	let count = {},
 		result = [];
