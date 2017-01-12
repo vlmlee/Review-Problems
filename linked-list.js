@@ -101,7 +101,7 @@ class LinkedList {
 */
 class Node {
     
-    /*
+    /**
     * Creates a node.
     * @param {*} data - A value held by the node.
     */
