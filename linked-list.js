@@ -103,7 +103,7 @@ class Node {
     
     /*
     * Creates a node.
-    * @params {*} data - A value held by the node.
+    * @param {*} data - A value held by the node.
     */
 	constructor(data) {
 		this.data = data;
