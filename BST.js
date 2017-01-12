@@ -1,3 +1,13 @@
+/*
+
+Problems:
+Implement a binary search tree.
+
+Solution:
+Wrote a es6 binary search tree using well known BST operations.
+
+*/
+
 const assert = require('assert');
 
 class Node {
