@@ -11,7 +11,7 @@ buckets. The items are then collected in order or in which ever
 order you set from each level until all the items are sorted. 
 This sorting algorithm is stable.
 
-Time complexity: O(n)
+Time complexity: O(n^2)
 
 */
 
