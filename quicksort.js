@@ -7,6 +7,8 @@ Solution:
 Implemented using a popular version of quicksort, notably from
 K&R.
 
+Time complexity: O(nlogn)
+
 */
 
 const assert = require('assert');
