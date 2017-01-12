@@ -10,7 +10,15 @@ Wrote a es6 binary search tree using well known BST operations.
 
 const assert = require('assert');
 
+/**
+* Class representing a Node.
+*/
 class Node {
+    
+    /**
+    * Create a node.
+    * @param {*} data - A value held by the node.
+    */
 	constructor(data) {
 		this.data = data;
 		this.left = null;
@@ -18,11 +26,22 @@ class Node {
 	}
 }
 
+/**
+* Class representing a binary search tree.
+*/
 class BST {
+    
+    /**
+    * Create a binary search tree with a root with initial value null.
+    */
 	constructor() {
 		this.root = null;
 	}
 
+    /**
+    * Add a node to the binary search tree with a initial value.
+    * @param {*} data - A value held by the node.
+    */
 	add(data) {
 		let node = new Node(data);
 		if (!this.root) {
@@ -49,6 +68,11 @@ class BST {
 		}
 	}
 
+    /**
+    * Remove a node from the binary if it holds a certain value.
+    * @param {*} data - The value held by the node you want to remove.
+    * @returns {node}
+    */
 	remove(data) {
 		let self = this;
 		let removeNode = function(node, data) {
@@ -80,6 +104,11 @@ class BST {
 		this.root = removeNode(this.root, data);
 	}
 
+    /**
+    * Returns the minimum value of a subtree.
+    * @param {node} node - Starting point in the subtree.
+    * @returns {*} data - The minimum value of the subtree.
+    */
 	getMin(node) {
 		if (!node) {
 			node = this.root;
@@ -89,7 +118,12 @@ class BST {
 		}
 		return node.data;
 	}
-
+    
+    /**
+    * Returns the maximum value of a subtree.
+    * @param {node} node - Starting point in the subtree.
+    * @returns {*} data - The maximum value of the subtree.
+    */
 	getMax(node) {
 		if (!node) {
 			node = this.root;
@@ -100,6 +134,11 @@ class BST {
 		return node.data;
 	}
 
+    /**
+    * Search the tree to see if a value exists.
+    * @param {*} data - The value you want to search.
+    * @returns {Boolean}
+    */
 	search(data) {
 		let current = this.root;
 		while (current) {
@@ -115,11 +154,16 @@ class BST {
 		return false;
 	}
 
+    /**
+    * Traverses the tree in preorder order.
+    * @param {node} node - The starting node of the traversal.
+    * @param {Array} preorder - An array containing any previous values.
+    * @returns {Array} - Array of values in preorder order.
+    */
 	preOrder(node, preorder) {
 		if (!preorder) {
 			preorder = [];
 		}
-
 		if (node) {
 			preorder.push(node.data);
 			this.preOrder(node.left, preorder);
@@ -128,6 +172,12 @@ class BST {
 		return preorder;
 	}
 
+    /**
+    * Traverses the tree in postorder order.
+    * @param {node} node - The starting node of the traversal.
+    * @param {Array} postorder - An array containing any previous values.
+    * @returns {Array} - Array of values in postorder order.
+    */
 	postOrder(node, postorder) {
 		if (!postorder) {
 			postorder = [];
@@ -140,6 +190,12 @@ class BST {
 		return postorder;
 	}
 
+    /**
+    * Traverses the tree in inorder order.
+    * @param {node} node - The starting node of the traversal.
+    * @param {Array} inorder - An array containing any previous values.
+    * @returns {Array} - Array of values in inorder order.
+    */
 	inOrder(node, inorder) {
 		if (!inorder) {
 			inorder = [];
@@ -152,6 +208,11 @@ class BST {
 		return inorder;
 	}
 
+    /**
+    * Inverts the binary search tree.
+    * @param {node} node - The root node of the subtree to invert. 
+    * @returns {node} node - Returns node to set left -> right, right -> left.
+    */
 	invert(node) {
 		if (node) {
 			let left = node.left ? node.left : null,
@@ -162,6 +223,12 @@ class BST {
 		return node;
 	}
 
+    /**
+    * Depth first search.
+    * @param {node} current - The starting node of the traversal.
+    * @param {Array} order - An array containing any previous values.
+    * @returns {Array} - Array of values in dfs order.
+    */
 	dfs(current, order) {
 		if (!order) {
 			order = [];
@@ -169,6 +236,12 @@ class BST {
 		return this.preOrder(current, order);
 	}
 
+    /**
+    * Breadth first search.
+    * @param {node} current - The starting node of the traversal.
+    * @param {Array} order - An array containing any previous values.
+    * @returns {Array} - Array of values in bfs order.
+    */
 	bfs(current, order) {
 		if (!order) {
 			order = [];
@@ -188,6 +261,11 @@ class BST {
 		return order;
 	}
 
+    /**
+    * Returns the high of a subtree.
+    * @param {node} node - The root node of the subtree.
+    * @returns {Number} - The height of the subtree.
+    */
 	getHeight(node) {
 		if (!node) {
 			return -1;
@@ -197,6 +275,11 @@ class BST {
 		return Math.max(left, right) + 1;
 	}
 
+    /**
+    * Returns if the subtree is balanced.
+    * @param {node} node - The root node of the subtree.
+    * @returns {Boolean} 
+    */
 	isBalanced(node) {
 		if (!node) {
 			return true;
@@ -212,6 +295,11 @@ class BST {
 	}
 }
 
+/**
+* Converts a sorted array into a binary search tree.
+* @param {Array} arr - A sorted array.
+* @param {tree} tree - A tree structure.
+*/
 function arrayToBST(arr, tree) {
 	if (!arr.length) {
 		return;
@@ -222,6 +310,12 @@ function arrayToBST(arr, tree) {
 	arrayToBST(arr.slice(mid+1), tree);
 }
 
+/**
+* Checks if two trees are mirror images of one another.
+* @param {tree} t1 - The first tree.
+* @param {tree} t2 - The second tree.
+* @returns {Boolean}
+*/
 function mirrorBST(t1, t2) {
 	t1.invert(t1.root);
 	let a = t1.inOrder(t1.root),
@@ -234,6 +328,11 @@ function mirrorBST(t1, t2) {
 	return true;
 }
 
+/**
+* Returns the maximum sum of a subtree.
+* @param {node} node - The root node of the subtree.
+* @returns {Number} sum - Max sum of the subtree.
+*/
 function maxPathSum(node) {
 	if (!node) return 0;
 	let left = Math.max(maxPathSum(node.left)),
@@ -242,6 +341,13 @@ function maxPathSum(node) {
 	return sum;
 }
 
+/**
+* Returns the lowest common ancestor of two nodes in a subtree.
+* @param {node} node - The root node of the subtree.
+* @param {*} a - The value of the first node.
+* @param {*} b - The value of the second node.
+* @returns {*} - The value of the lowest common ancestor.
+*/
 function lca(node, a, b) {
 	if (!node || node.data === a || node.data === b) return node;
 	let left = lca(node.left, a, b),
