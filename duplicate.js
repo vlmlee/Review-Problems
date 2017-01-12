@@ -17,6 +17,11 @@ Time complexity: O(nlogn)
 
 const assert = require('assert');
 
+/**
+* Finds duplicates in an array
+* @param {Array} arr - An input array which may or may not be sorted.
+* @returns {Array} dups - An array of the duplicate items.
+*/
 function findDuplicates(arr) {
 	let dups = [],
 		sortedArr = arr.sort();
@@ -33,6 +38,12 @@ function findDuplicates(arr) {
 	return dups;
 }
 
+/**
+* Binary search algorithm
+* @param {*} key - The search key to compare elements.
+* @param {Array} arr - A sorted input array.
+* @returns {Boolean}
+*/
 function bsearch(key, arr) {
 	if (!arr) {
 		return false;
