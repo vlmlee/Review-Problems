@@ -8,6 +8,8 @@ Insert the middle element into a BST and then
 recursively split the array and insert the middle
 elements of those arrays.
 
+Time complexity: O(n) - slice()
+
 */
 
 /**
