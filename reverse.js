@@ -13,6 +13,11 @@ Time complexity: O(n)
 
 const assert = require('assert');
 
+/**
+* Reverses an array in place.
+* @param {Array} arr - An input array.
+* @returns {Array} arr - Reversed array.
+*/
 function reverse(arr) {
 	for (let i = 0, len = arr.length - 1; i < Math.floor(len/2 + 1); i++) {
 		[arr[i], arr[len - i]] = [arr[len - i], arr[i]];
