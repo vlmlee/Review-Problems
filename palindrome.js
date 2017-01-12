@@ -13,13 +13,21 @@ Time complexity: O(n)
 
 const assert = require('assert');
 
-// Using built-in methods 'split', 'reverse', and 'join'
-// a.k.a. the *best* way
+/**
+* Simple reverse using built-in methods 'split', 'reverse', and 'join'
+* a.k.a. the best way
+* @params {string} str - String to reverse.
+* @returns {Boolean} - Is palindrome?
+*/
 function palindrome(str) {
 	return (str.split('').reverse().join('') === str);
 }
 
-// 'In-place'-like (since strings are immutable) iterative solution
+/**
+* 'In-place'-like (since strings are immutable) reverse
+* @param {string} str - String to reverse.
+* @returns {Boolean} - Is palindrome?
+*/
 function inPlacePalindrome(str) {
 	let p = '';
 	for (let i = str.length - 1; i >= 0; i--) {
