@@ -1,3 +1,20 @@
+/*
+
+Problem:
+Construct a BST from a sorted array.
+
+Solution:
+Insert the middle element into a BST and then
+recursively split the array and insert the middle
+elements of those arrays.
+
+*/
+
+/**
+* Converts a sorted array into a binary search tree.
+* @param {Array} arr - A sorted array.
+* @param {BST} tree - A tree structure.
+*/
 function arrayToBST(arr, tree) {
 	if (!arr.length) {
 		return;
