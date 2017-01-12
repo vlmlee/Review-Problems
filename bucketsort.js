@@ -17,6 +17,11 @@ Time complexity: O(n^2)
 
 const assert = require('assert');
 
+/**
+* Bucketsort: sorts an unsorted array.
+* @param {Array} arr - An unsorted array.
+* @returns {Array} - Returns a sorted array.
+*/
 function bucketsort(arr) {
 	if (arr.length < 1) {
 		return arr;
