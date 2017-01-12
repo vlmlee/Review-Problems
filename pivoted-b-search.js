@@ -1,5 +1,22 @@
+/*
+
+Problem:
+Implement binary search in a sorted rotated array.
+
+Solution:
+We split the array in two by its minimum value which
+we get by finding the peak of the array. We then perform
+a binary search on the array where the key is in range.
+
+*/
+
 const assert = require('assert');
 
+/**
+* Finds the minimum of a rotated sorted array.
+* @param {Array} arr - An input array.
+* @returns {*} low - The minimum of the array.
+*/
 function findMin(arr) {
 	let low = 0,
 		high = arr.length - 1;
@@ -14,6 +31,12 @@ function findMin(arr) {
 	return low;
 }
 
+/**
+* Splits a rotated sorted array into two sorted arrays and searches for a key.
+* @param {Array} arr - An input array.
+* @param {*} key - A value to search for in the array.
+* @returns {Boolean}
+*/
 function pivotBsearch(arr, key) {
 	let pivot = findMin(arr);
 	if (arr[pivot] === key) return true;
@@ -21,6 +44,14 @@ function pivotBsearch(arr, key) {
 	return bsearch(arr, pivot + 1, arr.length - 1, key);
 }
 
+/**
+* Binary search algorithm
+* @param {Array} arr - An input array.
+* @param {*} low - Left endpoint of a binary search.
+* @param {*} high - Right endpoint of a binary search.
+* @param {*} key - A value to search for in the array.
+* @returns {Boolean}
+*/
 function bsearch(arr, low, high, key) {
 	if (!arr) {
 		return false;
