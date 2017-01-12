@@ -1,9 +1,34 @@
+/*
+
+Problem:
+Implement quicksort.
+
+Solution:
+Implemented using a popular version of quicksort, notably from
+K&R.
+
+*/
+
 const assert = require('assert');
 
+/**
+* ES6 swap
+* @param {Array} arr - An input array.
+* @param {Number} i - An index to swap elements.
+* @param {Number} j - An index to swap elements.
+*/
 function swap(arr, i, j){
     [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
+/**
+* Splits an array into values less than a pivot, the midpoint value, swap
+* values in place and returns next pivot's index for the next iteration of 
+* quicksort.
+* @param {Array} arr - An input array that may or may not be sorted.
+* @param {Number} left - The left endpoint of a subarray to sort.
+* @param {Number} right - The right endpoint of a subarray to sort.
+*/
 function partition(arr, left, right) {
     let index = Math.floor((right + left) / 2),
         pivot = arr[index],
@@ -31,6 +56,13 @@ function partition(arr, left, right) {
     return index;
 }
 
+/**
+* Quicksort
+* @param {Array} arr - An input array.
+* @param {Number} left - The left endpoint of a subarray to sort.
+* @param {Number} right - The right endpoint of a subarray to sort.
+* @returns {Array} arr - A sorted array.
+*/
 function quicksort(arr, left, right) {
     if (arr.length > 1) {
         let pivotinx = partition(arr, left, right);
