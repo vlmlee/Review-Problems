@@ -19,6 +19,7 @@ const assert = require('assert');
 
 /**
 * Merges two arrays.
+*
 * @param {Array} left - First sorted input array to merge.
 * @param {Array} right - Second sorted input array to merge.
 * @returns {Array} merged - Merged sorted array.
