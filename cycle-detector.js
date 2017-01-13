@@ -26,6 +26,7 @@ const assert = require('assert'),
 
 /**
 * Detects a cycle in a linked list and returns the start of the cycle.
+*
 * @params {LinkedList} list - A linked list with or without a cycle.
 * @returns {Node} - Node that starts a cycle.
 */
