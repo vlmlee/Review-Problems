@@ -14,6 +14,7 @@ common ancestor.
 
 /**
 * Returns the lowest common ancestor of two nodes in a subtree.
+*
 * @param {Node} node - The root node of the subtree.
 * @param {*} a - The value of the first node.
 * @param {*} b - The value of the second node.
