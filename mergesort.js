@@ -16,6 +16,7 @@ const assert = require('assert');
 
 /**
 * Mergesort
+*
 * @param {Array} arr - An input array that may or may not be sorted.
 * @returns {Array} sorted - A sorted array.
 */
