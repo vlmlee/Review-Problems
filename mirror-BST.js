@@ -12,6 +12,7 @@ and if they are equal, then the two trees are mirror images.
 
 /**
 * Checks if two trees are mirror images of one another.
+*
 * @param {BST} t1 - The first tree.
 * @param {BST} t2 - The second tree.
 * @returns {Boolean}
@@ -30,6 +31,7 @@ function mirrorBST(t1, t2) {
 
 /**
 * Inverts the binary search tree.
+*
 * @param {Node} node - The root node of the subtree to invert. 
 * @returns {Node} node - Returns node to set left -> right, right -> left.
 */
