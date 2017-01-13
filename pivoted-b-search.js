@@ -16,6 +16,7 @@ const assert = require('assert');
 
 /**
 * Finds the minimum of a rotated sorted array.
+*
 * @param {Array} arr - An input array.
 * @returns {*} low - The minimum of the array.
 */
@@ -35,6 +36,7 @@ function findMin(arr) {
 
 /**
 * Splits a rotated sorted array into two sorted arrays and searches for a key.
+*
 * @param {Array} arr - An input array.
 * @param {*} key - A value to search for in the array.
 * @returns {Boolean}
@@ -48,6 +50,7 @@ function pivotBsearch(arr, key) {
 
 /**
 * Binary search algorithm
+*
 * @param {Array} arr - An input array.
 * @param {*} low - Left endpoint of a binary search.
 * @param {*} high - Right endpoint of a binary search.
