@@ -14,6 +14,7 @@ Time complexity: O(n) - slice()
 
 /**
 * Converts a sorted array into a binary search tree.
+*
 * @param {Array} arr - A sorted array.
 * @param {BST} tree - A tree structure.
 */
