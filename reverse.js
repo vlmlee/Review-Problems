@@ -15,6 +15,7 @@ const assert = require('assert');
 
 /**
 * Reverses an array in place.
+*
 * @param {Array} arr - An input array.
 * @returns {Array} arr - Reversed array.
 */
