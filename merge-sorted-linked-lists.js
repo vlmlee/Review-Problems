@@ -21,6 +21,7 @@ const LinkedList = require('./LinkedList.js'),
 
 /**
 * Merges two sorted linked lists.
+*
 * @param {LinkedList} la - First linked list.
 * @param {LinkedList} lb - Second linked list.
 * @returns {LinkedList}
