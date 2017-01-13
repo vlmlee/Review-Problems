@@ -15,6 +15,7 @@ const assert = require('assert');
 
 /**
 * Counting function
+*
 * @param {Array} arr - Input array to count items in the list.
 * @returns {Object} col - Returns an object showing the number of
 * occurrences of each item.
