@@ -36,6 +36,7 @@ const assert = require('assert');
 
 /**
 * Multiplies two matrices together.
+*
 * @param {Matrix} x - First matrix to multiply.
 * @param {Matrix} y - Second matrix to multiply.
 * @returns {Matrix} z - Matrix product of x and y.
