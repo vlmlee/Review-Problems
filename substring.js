@@ -16,6 +16,7 @@ const assert = require('assert');
 
 /**
 * Check if a string is a substring of another.
+*
 * @param {string} str - String to search in.
 * @param {string} key - The substring to search for.
 * @returns {Boolean}
