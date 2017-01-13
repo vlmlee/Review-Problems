@@ -25,6 +25,7 @@ class LinkedList {
 
     /**
     * Adds a node to the linked list. If no nodes exist, sets the node to root.
+    *
     * @param {*} value - A value held by the node.
     * @returns {Node}
     */
@@ -43,6 +44,7 @@ class LinkedList {
 
     /**
     * Searches the list for a node at a particular position
+    *
     * @param {Number} position - The position to return a node.
     * @returns {Node}
     */
@@ -64,6 +66,7 @@ class LinkedList {
 
     /**
     * Removes a node at a particular position.
+    *
     * @param {Number} position - The position to remove a node.
     * @returns {Node} deletedNode - Info on the deleted node.
     */
@@ -103,6 +106,7 @@ class Node {
     
     /**
     * Creates a node.
+    *
     * @param {*} data - A value held by the node.
     */
 	constructor(data) {
