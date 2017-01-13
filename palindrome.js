@@ -16,6 +16,7 @@ const assert = require('assert');
 /**
 * Simple reverse using built-in methods 'split', 'reverse', and 'join'
 * a.k.a. the best way
+*
 * @params {string} str - String to reverse.
 * @returns {Boolean} - Is palindrome?
 */
@@ -25,6 +26,7 @@ function palindrome(str) {
 
 /**
 * 'In-place'-like (since strings are immutable) reverse
+*
 * @param {string} str - String to reverse.
 * @returns {Boolean} - Is palindrome?
 */
