@@ -15,6 +15,7 @@ repeat this process until we reach the root node.
 
 /**
 * Returns the maximum sum of a subtree.
+*
 * @param {Node} node - The root node of the subtree.
 * @returns {Number} sum - Max sum of the subtree.
 */
