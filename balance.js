@@ -14,6 +14,7 @@ the leaves of the subtrees, we return true.
 
 /**
 * Returns the height of a subtree.
+*
 * @param {Node} node - The root node of the subtree.
 * @returns {Number} - The height of the subtree.
 */
@@ -28,6 +29,7 @@ getHeight(node) {
 
 /**
 * Returns if the subtree is balanced.
+*
 * @param {Node} node - The root node of the subtree.
 * @returns {Boolean} 
 */
