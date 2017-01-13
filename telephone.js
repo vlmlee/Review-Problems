@@ -16,6 +16,7 @@ let dictionary = {};
 
 /**
 * Converts a string of numbers into a word.
+*
 * @param {string} input - An input string of numbers.
 * @returns {string}
 */
