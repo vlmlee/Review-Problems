@@ -18,6 +18,7 @@ traversal.
 
 /**
 * Breadth first search.
+*
 * @param {Node} current - The starting node of the traversal.
 * @param {Array} order - An array containing any previous values.
 * @returns {Array} - Array of values in bfs order.
