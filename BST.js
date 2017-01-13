@@ -17,6 +17,7 @@ class Node {
     
     /**
     * Create a node.
+    *
     * @param {*} data - A value held by the node.
     */
 	constructor(data) {
@@ -40,6 +41,7 @@ class BST {
 
     /**
     * Add a node to the binary search tree with a initial value.
+    *
     * @param {*} data - A value held by the node.
     */
 	add(data) {
@@ -70,6 +72,7 @@ class BST {
 
     /**
     * Remove a node from the binary if it holds a certain value.
+    *
     * @param {*} data - The value held by the node you want to remove.
     * @returns {Node}
     */
@@ -106,6 +109,7 @@ class BST {
 
     /**
     * Returns the minimum value of a subtree.
+    *
     * @param {Node} node - Starting point in the subtree.
     * @returns {*} data - The minimum value of the subtree.
     */
@@ -121,6 +125,7 @@ class BST {
     
     /**
     * Returns the maximum value of a subtree.
+    *
     * @param {Node} node - Starting point in the subtree.
     * @returns {*} data - The maximum value of the subtree.
     */
@@ -136,6 +141,7 @@ class BST {
 
     /**
     * Search the tree to see if a value exists.
+    *
     * @param {*} data - The value you want to search.
     * @returns {Boolean}
     */
@@ -156,6 +162,7 @@ class BST {
 
     /**
     * Traverses the tree in preorder order.
+    *
     * @param {Node} node - The starting node of the traversal.
     * @param {Array} preorder - An array containing any previous values.
     * @returns {Array} - Array of values in preorder order.
@@ -174,6 +181,7 @@ class BST {
 
     /**
     * Traverses the tree in postorder order.
+    *
     * @param {Node} node - The starting node of the traversal.
     * @param {Array} postorder - An array containing any previous values.
     * @returns {Array} - Array of values in postorder order.
@@ -192,6 +200,7 @@ class BST {
 
     /**
     * Traverses the tree in inorder order.
+    *
     * @param {Node} node - The starting node of the traversal.
     * @param {Array} inorder - An array containing any previous values.
     * @returns {Array} - Array of values in inorder order.
@@ -210,6 +219,7 @@ class BST {
 
     /**
     * Inverts the binary search tree.
+    *
     * @param {Node} node - The root node of the subtree to invert. 
     * @returns {Node} node - Returns node to set left -> right, right -> left.
     */
@@ -225,6 +235,7 @@ class BST {
 
     /**
     * Depth first search.
+    *
     * @param {Node} current - The starting node of the traversal.
     * @param {Array} order - An array containing any previous values.
     * @returns {Array} - Array of values in dfs order.
@@ -238,6 +249,7 @@ class BST {
 
     /**
     * Breadth first search.
+    *
     * @param {Node} current - The starting node of the traversal.
     * @param {Array} order - An array containing any previous values.
     * @returns {Array} - Array of values in bfs order.
@@ -263,6 +275,7 @@ class BST {
 
     /**
     * Returns the height of a subtree.
+    *
     * @param {Node} node - The root node of the subtree.
     * @returns {Number} - The height of the subtree.
     */
@@ -277,6 +290,7 @@ class BST {
 
     /**
     * Returns if the subtree is balanced.
+    *
     * @param {Node} node - The root node of the subtree.
     * @returns {Boolean} 
     */
@@ -297,6 +311,7 @@ class BST {
 
 /**
 * Converts a sorted array into a binary search tree.
+*
 * @param {Array} arr - A sorted array.
 * @param {BST} tree - A tree structure.
 */
@@ -312,6 +327,7 @@ function arrayToBST(arr, tree) {
 
 /**
 * Checks if two trees are mirror images of one another.
+*
 * @param {BST} t1 - The first tree.
 * @param {BST} t2 - The second tree.
 * @returns {Boolean}
@@ -330,6 +346,7 @@ function mirrorBST(t1, t2) {
 
 /**
 * Returns the maximum sum of a subtree.
+*
 * @param {Node} node - The root node of the subtree.
 * @returns {Number} sum - Max sum of the subtree.
 */
@@ -343,6 +360,7 @@ function maxPathSum(node) {
 
 /**
 * Returns the lowest common ancestor of two nodes in a subtree.
+*
 * @param {Node} node - The root node of the subtree.
 * @param {*} a - The value of the first node.
 * @param {*} b - The value of the second node.
