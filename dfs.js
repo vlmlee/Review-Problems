@@ -12,6 +12,7 @@ a subtree before their parents.
 
 /**
 * Depth first search
+*
 * @param {Node} current - Starting point in the subtree.
 * @param {Array} order - An array containing any previous values.
 * @returns {Array} - An array of values in preorder order.
