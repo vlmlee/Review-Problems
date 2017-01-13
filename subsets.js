@@ -37,6 +37,7 @@ It is the case that we can get all combinations this way.
 
 /**
 * Returns the subsets of an array.
+*
 * @param {Array} arr - An input array.
 * @returns {Array} set - Returns the superset of the array.
 */
