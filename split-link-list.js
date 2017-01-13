@@ -14,6 +14,7 @@ const LinkedList = require('./LinkedList.js'),
 
 /**
 * Splits a linked list into two lists.
+*
 * @param {LinkedList} list - An input linked list.
 * @returns {Object} la, lb
 */
