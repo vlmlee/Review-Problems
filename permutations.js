@@ -41,6 +41,7 @@ etc.
 
 /**
 * ES6 in-place swap using destructuring.
+*
 * @param {Array} array - An input array.
 * @param {Number} i - An index in the array.
 * @param {Number} j - An index in the array.
@@ -51,6 +52,7 @@ function swap(array, i, j) {
 
 /**
 * Algorithm that in-place swaps every element with a callback.
+*
 * @param {Array} array - An input array.
 * @param {Function} callback - A callback function.
 * @param {Number} n - The number of items in the list to permute from the left.
