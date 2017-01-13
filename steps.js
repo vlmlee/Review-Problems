@@ -25,6 +25,7 @@ let cache = {};
 
 /**
 * Number of ways to reach to top of a n staircase with 1, 2, or 3 possible step increments.
+*
 * @param {Number} n - The number of steps.
 * @returns {Number} value - The number ways to get to the top of staircase.
 */
