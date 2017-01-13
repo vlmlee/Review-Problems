@@ -19,6 +19,7 @@ const assert = require('assert');
 
 /**
 * Bucketsort: sorts an unsorted array.
+*
 * @param {Array} arr - An unsorted array.
 * @returns {Array} - Returns a sorted array.
 */
