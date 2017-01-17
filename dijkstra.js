@@ -4,7 +4,7 @@ Problem:
 Implement Dijkstra's shortest path algorithm. 
 
 Solution:
-Implementing it from scratch would a bit troublesome,
+Implementing it from scratch would've been a bit troublesome,
 so I found a very nice implementation of graph
 algorithms from devenbhooshan @
 https://github.com/devenbhooshan/graph.js/, but it was
