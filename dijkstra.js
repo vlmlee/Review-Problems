@@ -5,15 +5,15 @@ Implement Dijkstra's shortest path algorithm.
 
 Solution:
 Implementing it from scratch would've been a bit troublesome,
-so I found a very nice implementation of graph
-algorithms from devenbhooshan @
-https://github.com/devenbhooshan/graph.js/, but it was
-a bit outdated.
+so I found a very nice implementation of graph algorithms 
+from devenbhooshan @ https://github.com/devenbhooshan/graph.js/, 
+but it was a bit outdated.
 
 I reimplemented the module with es6 syntax, renamed and cleaned 
-a lot of it up, scoped variables that were missing scope, 
-refactored the code to use functional programming, fixed some missing 
-functionality, and made sure it passed some simple unit tests.
+a lot of it up, added slight documentation, scoped variables 
+that were missing scope, refactored the code to use functional 
+programming, fixed some missing functionality, and made sure it 
+passed some simple unit tests.
 
 */
 
