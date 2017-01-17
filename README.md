@@ -39,4 +39,4 @@ Just solving a list of interview questions for algorithms and data structures re
 ## Dynamic programming:
 * ~~Given you can climb 1, 2, or 3 stairs in one step, how many ways can you reach the top?~~
 * How many ways to go from top left of a grid to bottom right of the grid with some obstacles in between?
-* Djikstra's shortest path algorithm
+* ~~Djikstra's shortest path algorithm~~
